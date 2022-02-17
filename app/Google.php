@@ -53,24 +53,4 @@ class Google
 
         return $languages;
     }
-
-    /**
-     * Finds a letter at a certain point on the alphabet used in Google's secret key.
-     * @param int $startNumber    A base offset position.
-     * @param string $startLetter The letter to match to your $startNumber.
-     * @param int $findNumber     The number, above $startNumber, to find on the alphabet.
-     * @return string The letter.
-     */
-    function getLetterFromAlphabet($startNumber = 1, $startLetter = "a", $findNumber = 2): string
-    {
-        $alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-
-        $offset = 0;
-        foreach ($alpha as $i => $letter) {
-            if ($letter == $startLetter) $offset = $i;
-        }
-
-        $difference = $findNumber - $startNumber;
-        return $alpha[$offset + $difference];
-    }
 }
