@@ -1,0 +1,11 @@
+# IDE
+/.idea
+/nbproject
+
+# build
+composer.phar
+/vendor/
+/_build/
+
+# general
+.DS_Store
